@@ -1,4 +1,4 @@
---Publishare Data Analysisþ
+--Publishare Data AnalysisÃ¾
 
 USE Publishare
 -------------------------------
@@ -80,9 +80,9 @@ ORDER BY num_of_articles DESC
 
 --09
 SELECT A.author, T.traffic_day, SUM(T.article_views) AS 'total_articles_views',  SUM(CASE WHEN C.category_name = 'Energy' THEN T.article_views END) AS 'Energy_views',
-																				 SUM(CASE WHEN C.category_name = 'Technology' THEN T.article_views END) AS 'Technology_views',
-																				 SUM(CASE WHEN C.category_name = 'Finance' THEN T.article_views ELSE 0 END) AS 'Finance_views',
-																				 SUM(CASE WHEN C.category_name = 'Transportation' THEN T.article_views END) AS 'Transportation_views'
+										 SUM(CASE WHEN C.category_name = 'Technology' THEN T.article_views END) AS 'Technology_views',
+										 SUM(CASE WHEN C.category_name = 'Finance' THEN T.article_views ELSE 0 END) AS 'Finance_views',
+										 SUM(CASE WHEN C.category_name = 'Transportation' THEN T.article_views END) AS 'Transportation_views'
 FROM authors A
 JOIN articles ART
 	ON A.author_id = ART.author_id
